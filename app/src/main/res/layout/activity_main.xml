@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/background_color"
+    tools:context=".ui.activity.main.MainActivity">
+    <TextView
+        android:id="@+id/tvSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSearch"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_background"
+        android:drawableStart="@drawable/ic_search"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="10dp"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/white"
+        android:hint="@string/search_your_image"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnImages"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/images"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_background"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMyFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/my_favourite"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/input_background"
+        app:layout_constraintStart_toEndOf="@id/btnImages"
+        app:layout_constraintTop_toBottomOf="@id/etSearch"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnImages"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="@string/results"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/ivfilledMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_filled_burger_menu"
+        app:layout_constraintTop_toBottomOf="@id/btnMyFavourite"
+        app:layout_constraintEnd_toStartOf="@id/ivUnfilledMenu"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/ivUnfilledMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_unfilled_burger_menu"
+        app:layout_constraintTop_toBottomOf="@id/btnMyFavourite"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
